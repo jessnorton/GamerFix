@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gamer Fix - Item Details</title>
+    <link rel="stylesheet" type="text/css" href="/css/item.css">
+</head>
+<body>
+    
+    <%- include('partials/_header') %>
+
+    <main>
+        <section id="item-detail">
+            <div class="item-image">
+                <img src="<%= item.image %>" alt="<%= item.title %> Image">
+            </div>
+            <div class="item-info">
+                <h2><%= item.title %></h2>
+                <p>Status: For Sale</p>
+                <p>Condition: <%= item.condition %></p>
+                <p>Price: $<%= item.price.toFixed(2) %></p>
+                <p>Total Offers: <%= item.totalOffers %></p>
+                <p>Details: <%= item.details %></p>
+                <p>Seller: <%= item.seller.firstName %> <%= item.seller.lastName %></p>          
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/_footer') %>
+    
+</body>
+</html>

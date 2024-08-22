@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gamer Fix - List New Item</title>
+    <link rel="stylesheet" type="text/css" href="/css//itemForm.css">
+</head>
+<body>
+    
+    <%- include('partials/_header') %>
+
+    <main>
+        <section id="item-form">
+            <h2>List a New Item</h2>
+            <form action="/items" method="post" enctype="multipart/form-data">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="condition">Condition:</label>
+                <select id="condition" name="condition" required>
+                    <option value="">Select Condition</option>
+                    <option value="New">New</option>
+                    <option value="Like New">Like New</option>
+                    <option value="Used">Used</option>
+                    <option value="Refurbished">Refurbished</option>
+                </select>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+
+                <label for="details">Details:</label>
+                <textarea id="details" name="details" required></textarea>
+
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include('partials/_footer') %>
+    
+</body>
+</html>

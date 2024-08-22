@@ -12,56 +12,8 @@ body {
     min-height: 100%;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-#navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-#navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#navbar ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-#navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 main {
     flex: 1;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-}
-
-footer a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-#logo img {
-    height: 70px;
-    width: auto;
 }
 
 #login-form {
@@ -86,7 +38,7 @@ footer a {
     margin-top: 10px;
 }
 
-#login-form input[type="text"],
+#login-form input[type="email"],
 #login-form input[type="password"] {
     width: 95%;
     padding: 8px;

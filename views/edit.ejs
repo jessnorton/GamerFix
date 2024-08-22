@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="/css/itemForm.css">
+</head>
+<body>
+    <%- include('partials/_header') %>
+    
+<main>
+    <section id="item-form">
+    <h2>Edit Item</h2>
+    <form action="/items/<%= item._id %>?_method=PUT" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="<%= item.title %>" required>
+
+        <label for="condition">Condition:</label>
+        <select id="condition" name="condition" required>
+            <option value="New" <%= item.condition === 'New' ? 'selected' : '' %>>New</option>
+            <option value="Like New" <%= item.condition === 'Like New' ? 'selected' : '' %>>Like New</option>
+            <option value="Used" <%= item.condition === 'Used' ? 'selected' : '' %>>Used</option>
+            <option value="Refurbished" <%= item.condition === 'Refurbished' ? 'selected' : '' %>>Refurbished</option>
+        </select>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" value="<%= item.price %>" required>
+
+        <label for="details">Details:</label>
+        <textarea id="details" name="details" required><%= item.details %></textarea>
+
+        <button type="submit">Update Item</button>
+    </form>
+    </section>
+</main>
+
+    <%- include('partials/_footer') %>
+</body>
+</html>
